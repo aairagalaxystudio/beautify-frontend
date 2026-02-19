@@ -1,9 +1,9 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Beautify by Mansi",
-  description: "Luxury Press-On Nails | Premium. Elegant. Timeless.",
+  description: "Luxury Press-On Nails",
 };
 
 export default function RootLayout({
@@ -15,21 +15,18 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header className="navbar">
-          <div className="nav-container">
-            <a href="/" className="logo">
-              Beautify by Mansi
-            </a>
-            <nav>
-              <a href="/collection">Collection</a>
-            </nav>
-          </div>
+          <Link href="/" className="logo">
+            Beautify by Mansi
+          </Link>
+
+          <nav>
+            <Link href="/collection" className="navlink">
+              Collection
+            </Link>
+          </nav>
         </header>
 
-        <main>{children}</main>
-
-        <footer className="footer">
-          © {new Date().getFullYear()} Beautify by Mansi. All rights reserved.
-        </footer>
+        {children}
       </body>
     </html>
   );
