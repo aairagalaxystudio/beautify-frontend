@@ -1,46 +1,35 @@
-async function getProducts() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/products`,
-    { cache: "no-store" }
-  );
+"use client";
+import { useEffect, useState } from "react";
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch products");
-  }
+export default function Collection() {
+  const [products, setProducts] = useState<any[]>([]);
 
-  return res.json();
-}
-
-export default async function CollectionPage() {
-  const products = await getProducts();
+  useEffect(() => {
+    fetch(process.env.NEXT_PUBLIC_API_URL + "/api/products")
+      .then(res => res.json())
+      .then(data => setProducts(data));
+  }, []);
 
   return (
     <div style={{ padding: "40px" }}>
-      <h1 style={{ marginBottom: "30px" }}>Luxury Collection</h1>
+      <h1 style={{ fontSize: "32px", marginBottom: "30px" }}>
+        Luxury Collection
+      </h1>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-          gap: "20px"
-        }}
-      >
-        {products.map((product: any) => (
-          <div
-            key={product.id}
-            style={{
-              border: "1px solid #eee",
-              padding: "20px",
-              borderRadius: "10px"
-            }}
-          >
-            <img
-              src={product.image}
-              alt={product.name}
-              style={{ width: "100%", borderRadius: "10px" }}
-            />
-            <h3>{product.name}</h3>
-            <p>₹ {product.price}</p>
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+        gap: "30px"
+      }}>
+        {products.map((p) => (
+          <div key={p._id} style={{
+            border: "1px solid #eee",
+            padding: "20px",
+            borderRadius: "10px"
+          }}>
+            <img src={p.image} width="100%" />
+            <h3>{p.name}</h3>
+            <p>₹ {p.price}</p>
           </div>
         ))}
       </div>
