@@ -1,34 +1,21 @@
-import Link from "next/link";
+export default function Collection() {
+  const products = [
+    { name: "Royal Nude Press-On", price: 1499 },
+    { name: "French Classic", price: 1299 },
+  ];
 
-export default function CollectionPage() {
   return (
-    <main className="collection-page">
-      
-      <section className="collection-hero">
-        <h1>Luxury Collection</h1>
-        <p>Crafted elegance. Timeless beauty.</p>
-      </section>
+    <main className="collection">
+      <h1>Luxury Collection</h1>
 
-      <section className="collection-grid">
-
-        <div className="product-card">
-          <h3>Royal Nude Press-On</h3>
-          <p className="price">₹1499</p>
-          <button className="btn">Shop Now</button>
-        </div>
-
-        <div className="product-card">
-          <h3>French Classic</h3>
-          <p className="price">₹1299</p>
-          <button className="btn">Shop Now</button>
-        </div>
-
-      </section>
-
-      <div className="back-home">
-        <Link href="/">← Back to Home</Link>
+      <div className="grid">
+        {products.map((product, index) => (
+          <div key={index} className="card">
+            <h2>{product.name}</h2>
+            <p>₹{product.price}</p>
+          </div>
+        ))}
       </div>
-
     </main>
   );
 }
