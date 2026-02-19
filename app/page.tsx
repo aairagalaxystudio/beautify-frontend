@@ -13,4 +13,4 @@ export default function Home() {
       <p>Luxury Press-On Nails</p>
     </main>
   );
-}
+} 
