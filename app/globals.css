@@ -1,0 +1,120 @@
+/* =========================
+   Beautify by Mansi
+   Luxury Global Styles
+========================= */
+
+:root {
+  --primary: #000000;
+  --accent: #c6a94f; /* Luxury gold */
+  --light: #ffffff;
+  --soft-gray: #f8f8f8;
+  --text: #222222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--light);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+  background: var(--light);
+  padding: 20px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+nav h2 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* ================= HERO ================= */
+
+section {
+  background: linear-gradient(to bottom, #ffffff, #fafafa);
+}
+
+section h1 {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+section p {
+  font-size: 18px;
+  color: #555;
+}
+
+button {
+  background: var(--primary);
+  color: var(--light);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: var(--accent);
+}
+
+/* ================= COLLECTION ================= */
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.product-card {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  margin-top: 80px;
+  padding: 40px;
+  text-align: center;
+  background: var(--soft-gray);
+  font-size: 14px;
+}
