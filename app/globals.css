@@ -1,120 +1,147 @@
-/* =========================
-   Beautify by Mansi
-   Luxury Global Styles
-========================= */
-
-:root {
-  --primary: #000000;
-  --accent: #c6a94f; /* Luxury gold */
-  --light: #ffffff;
-  --soft-gray: #f8f8f8;
-  --text: #222222;
-}
-
+/* ====== RESET ====== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--light);
-  color: var(--text);
+html, body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f8f6;
+  color: #1a1a1a;
   scroll-behavior: smooth;
 }
 
-/* ================= NAVBAR ================= */
-
+/* ====== NAVBAR ====== */
 nav {
-  background: var(--light);
-  padding: 20px 40px;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
   border-bottom: 1px solid #eee;
-}
-
-nav h2 {
-  font-weight: 600;
-  letter-spacing: 1px;
 }
 
 nav a {
   text-decoration: none;
-  color: var(--primary);
+  color: #111;
   font-weight: 500;
-  transition: 0.3s ease;
+  margin-left: 30px;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color: var(--accent);
+  color: #c9a227;
 }
 
-/* ================= HERO ================= */
-
-section {
-  background: linear-gradient(to bottom, #ffffff, #fafafa);
+/* ====== HERO SECTION ====== */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 80px;
+  background: linear-gradient(to right, #f8f6f2, #ffffff);
 }
 
-section h1 {
-  font-size: 42px;
+.hero h1 {
+  font-size: 64px;
   font-weight: 600;
-  margin-bottom: 10px;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
 }
 
-section p {
-  font-size: 18px;
-  color: #555;
-}
-
-button {
-  background: var(--primary);
-  color: var(--light);
-  border: none;
-  padding: 12px 30px;
-  border-radius: 6px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-button:hover {
-  background: var(--accent);
-}
-
-/* ================= COLLECTION ================= */
-
-h1 {
-  font-size: 32px;
+.hero p {
+  font-size: 20px;
+  color: #666;
   margin-bottom: 30px;
 }
 
-h2 {
-  font-size: 20px;
-  margin-bottom: 5px;
+.hero button {
+  width: 180px;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: #c9a227;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-p {
-  font-size: 16px;
-}
-
-.product-card {
-  padding: 20px;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  transition: 0.3s ease;
-}
-
-.product-card:hover {
-  border-color: var(--accent);
+.hero button:hover {
+  background: #b38e1d;
   transform: translateY(-3px);
 }
 
-/* ================= FOOTER ================= */
+/* ====== COLLECTION ====== */
+.collection-container {
+  padding: 80px 60px;
+}
 
-footer {
-  margin-top: 80px;
-  padding: 40px;
+.collection-title {
+  font-size: 42px;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
   text-align: center;
-  background: var(--soft-gray);
-  font-size: 14px;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+.product-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.product-card button {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  background: #c9a227;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-card button:hover {
+  background: #b38e1d;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  margin-top: 100px;
+  padding: 40px 60px;
+  background: #111;
+  color: white;
+  text-align: center;
 }
