@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <nav className="navbar">
-          <div className="logo">Beautify by Mansi</div>
+          <div className="logo">BEAUTIFY BY MANSI</div>
           <div className="nav-links">
             <Link href="/">Home</Link>
             <Link href="/collection">Collection</Link>
