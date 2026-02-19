@@ -1,36 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 
-export default function Home() {
+const products = [
+  { name: "Royal Nude Press-On", price: 1499 },
+  { name: "French Classic", price: 1299 },
+  { name: "Midnight Glam", price: 1799 },
+];
+
+export default function Collection() {
   return (
-    <section className="hero">
-      <motion.h1
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        Redefining Luxury Nails
-      </motion.h1>
+    <section className="collection">
+      <h1>Luxury Collection</h1>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
-      >
-        Precision crafted. Timeless elegance.
-      </motion.p>
-
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.8, duration: 0.6 }}
-      >
-        <Link href="/collection">
-          <button className="primary-btn">Explore Collection</button>
-        </Link>
-      </motion.div>
+      <div className="grid">
+        {products.map((product, index) => (
+          <motion.div
+            key={index}
+            className="card"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            viewport={{ once: true }}
+          >
+            <h2>{product.name}</h2>
+            <p>₹ {product.price}</p>
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
 }
