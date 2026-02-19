@@ -1,14 +1,10 @@
-import Link from "next/link";
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="hero">
-      <h1>Luxury Press-On Nails</h1>
-      <p>Premium. Elegant. Timeless.</p>
-
-      <Link href="/collection" className="cta">
-        Shop Collection
-      </Link>
+    <main>
+      <section className="hero">
+        <h1>Luxury Press-On Nails</h1>
+        <p>Premium. Elegant. Timeless.</p>
+      </section>
     </main>
   );
 }
