@@ -5,77 +5,98 @@
 }
 
 body {
-  background: #0a0a0a;
-  color: #ffffff;
+  background: #000;
+  color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-a {
-  color: #ffffff;
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid #111;
+}
+
+.logo {
+  color: white;
   text-decoration: none;
-}
-
-main {
-  padding: 100px 40px;
-}
-
-.collection-hero {
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.collection-hero h1 {
-  font-size: 48px;
   font-weight: 500;
 }
 
-.collection-hero p {
-  margin-top: 12px;
-  color: #aaaaaa;
+.navlink {
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.collection-grid {
-  display: grid;
-  gap: 40px;
-  max-width: 900px;
-  margin: auto;
+.navlink:hover {
+  color: white;
 }
 
-.product-card {
-  border: 1px solid #222;
-  padding: 40px;
-  border-radius: 12px;
-  transition: 0.3s ease;
-}
-
-.product-card:hover {
-  border-color: #666;
-  transform: translateY(-5px);
-}
-
-.price {
-  margin-top: 10px;
-  color: #d4af37;
-  font-weight: 500;
-}
-
-.btn {
-  margin-top: 20px;
-  padding: 12px 24px;
-  background: #d4af37;
-  color: #000;
-  border: none;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  background: #f0c94c;
-}
-
-.back-home {
-  margin-top: 80px;
+/* Hero */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
   text-align: center;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 300;
+}
+
+.hero p {
   color: #999;
+  font-size: 20px;
+}
+
+.cta {
+  background: gold;
+  color: black;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Collection */
+.collection {
+  padding: 80px 40px;
+}
+
+.collection h1 {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  gap: 30px;
+}
+
+.card {
+  padding: 40px;
+  border: 1px solid #111;
+  border-radius: 20px;
+  background: #0b0b0b;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: gold;
+}
+
+.card h2 {
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: gold;
 }
