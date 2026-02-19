@@ -7,28 +7,28 @@ export default function Home() {
   return (
     <section className="hero">
       <motion.h1
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        Redefining Luxury Nails
+        The Art of Luxury Nails
       </motion.h1>
 
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
+        transition={{ delay: 0.6, duration: 1 }}
       >
-        Precision crafted. Timeless elegance.
+        Crafted for elegance. Designed for royalty.
       </motion.p>
 
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.8, duration: 0.6 }}
+        transition={{ delay: 1, duration: 0.6 }}
       >
         <Link href="/collection">
-          <button className="primary-btn">Explore Collection</button>
+          <button className="primary-btn">DISCOVER</button>
         </Link>
       </motion.div>
     </section>
