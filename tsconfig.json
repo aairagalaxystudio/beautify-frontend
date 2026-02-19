@@ -7,11 +7,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "jsx": "preserve",
-    "noEmit": true,
-    "incremental": true,
-    "paths": {
-      "@/*": ["./*"]
-    }
+    "noEmit": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
