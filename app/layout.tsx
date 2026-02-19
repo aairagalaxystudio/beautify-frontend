@@ -1,10 +1,8 @@
 import "./globals.css";
-import type { Metadata } from "next";
-import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Beautify by Mansi",
-  description: "Luxury Beauty Brand",
+  description: "Luxury Beauty Brand"
 };
 
 export default function RootLayout({
@@ -15,13 +13,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <nav className="navbar">
-          <div className="logo">BEAUTIFY BY MANSI</div>
-          <div className="nav-links">
-            <Link href="/">Home</Link>
-            <Link href="/collection">Collection</Link>
-          </div>
-        </nav>
         {children}
       </body>
     </html>
