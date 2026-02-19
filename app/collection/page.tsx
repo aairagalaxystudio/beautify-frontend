@@ -1,29 +1,36 @@
 "use client";
-import { useEffect, useState } from "react";
 
-export default function Collection() {
-  const [products, setProducts] = useState<any[]>([]);
+import { motion } from "framer-motion";
+import Link from "next/link";
 
-  useEffect(() => {
-    fetch(process.env.NEXT_PUBLIC_API_URL + "/api/products")
-      .then(res => res.json())
-      .then(data => setProducts(data));
-  }, []);
-
+export default function Home() {
   return (
-    <div className="collection-container">
-      <h1 className="collection-title">Luxury Collection</h1>
+    <section className="hero">
+      <motion.h1
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        Redefining Luxury Nails
+      </motion.h1>
 
-      <div className="product-grid">
-        {products.map((p) => (
-          <div key={p._id} className="product-card">
-            <img src={p.image} alt={p.name} />
-            <h3>{p.name}</h3>
-            <p>₹ {p.price}</p>
-            <button>Add to Cart</button>
-          </div>
-        ))}
-      </div>
-    </div>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+      >
+        Precision crafted. Timeless elegance.
+      </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.8, duration: 0.6 }}
+      >
+        <Link href="/collection">
+          <button className="primary-btn">Explore Collection</button>
+        </Link>
+      </motion.div>
+    </section>
   );
 }
