@@ -10,93 +10,44 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
-  border-bottom: 1px solid #111;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .logo {
-  color: white;
-  text-decoration: none;
   font-weight: 500;
-}
-
-.navlink {
-  color: #aaa;
   text-decoration: none;
-  transition: 0.3s;
-}
-
-.navlink:hover {
   color: white;
+  font-size: 18px;
 }
 
-/* Hero */
-.hero {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  text-align: center;
+.navbar a {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
 }
 
+/* PAGE SPACING */
+main {
+  padding: 140px 40px 80px;
+}
+
+/* HERO */
 .hero h1 {
   font-size: 56px;
   font-weight: 300;
+  margin-bottom: 20px;
 }
 
 .hero p {
-  color: #999;
-  font-size: 20px;
-}
-
-.cta {
-  background: gold;
-  color: black;
-  padding: 12px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* Collection */
-.collection {
-  padding: 80px 40px;
-}
-
-.collection h1 {
-  font-size: 48px;
-  margin-bottom: 40px;
-}
-
-.grid {
-  display: grid;
-  gap: 30px;
-}
-
-.card {
-  padding: 40px;
-  border: 1px solid #111;
-  border-radius: 20px;
-  background: #0b0b0b;
-  transition: 0.4s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: gold;
-}
-
-.card h2 {
-  font-weight: 300;
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: gold;
+  font-size: 18px;
+  color: #aaa;
 }
