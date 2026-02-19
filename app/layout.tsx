@@ -20,9 +20,7 @@ export default function RootLayout({
           </Link>
 
           <nav>
-            <Link href="/collection" className="navlink">
-              Collection
-            </Link>
+            <Link href="/collection">Collection</Link>
           </nav>
         </header>
 
