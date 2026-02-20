@@ -1,30 +1,17 @@
 import './globals.css'
-import Link from 'next/link'
+import { CartProvider } from '@/components/CartContext'
+import CartDrawer from '@/components/CartDrawer'
+import Cursor from '@/components/Cursor'
 
-export const metadata = {
-  title: 'Beautify by Mansi',
-  description: 'Luxury Press-On Nails',
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: any) {
   return (
-    <html lang="en">
+    <html>
       <body>
-        <header className="navbar">
-          <Link href="/" className="logo">
-            Beautify by Mansi
-          </Link>
-
-          <nav>
-            <Link href="/collection">Collection</Link>
-          </nav>
-        </header>
-
-        {children}
+        <CartProvider>
+          <Cursor />
+          <CartDrawer />
+          {children}
+        </CartProvider>
       </body>
     </html>
   )
