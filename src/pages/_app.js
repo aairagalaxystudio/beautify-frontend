@@ -1,6 +1,6 @@
-```javascript
 import '@/styles/globals.css';
 import { Playfair_Display, Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
   return (
     <main className={`${playfair.variable} ${inter.variable}`}>
       <Component {...pageProps} />
+      <Analytics />
     </main>
   );
 }
-```

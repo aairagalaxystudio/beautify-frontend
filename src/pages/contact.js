@@ -1,4 +1,3 @@
-```javascript
 import Layout from '@/components/Layout';
 import Button from '@/components/Button';
 import { useState } from 'react';
@@ -74,4 +73,3 @@ export default function Contact() {
     </Layout>
   );
 }
-```

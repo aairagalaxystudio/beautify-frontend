@@ -1,4 +1,5 @@
-```javascript
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="bg-black" style={{ color: 'var(--soft-white)', padding: 'var(--space-lg) 0', marginTop: 'var(--space-xl)' }}>
@@ -30,4 +31,3 @@ export default function Footer() {
     </footer>
   );
 }
-```

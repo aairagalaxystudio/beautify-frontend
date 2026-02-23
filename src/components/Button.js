@@ -1,5 +1,3 @@
-
-```javascript
 export default function Button({ children, variant = 'primary', ...props }) {
   const baseStyle = {
     display: 'inline-block',
@@ -44,4 +42,3 @@ export default function Button({ children, variant = 'primary', ...props }) {
     </button>
   );
 }
-```

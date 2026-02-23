@@ -1,4 +1,3 @@
-```javascript
 import Layout from '@/components/Layout';
 import Button from '@/components/Button';
 import ProductCard from '@/components/ProductCard';
@@ -46,4 +45,3 @@ export default function Home() {
     </Layout>
   );
 }
-```
