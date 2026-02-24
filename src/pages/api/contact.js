@@ -1,13 +1,13 @@
-export default function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ message: "Method not allowed" });
-  }
+export default function handler(req,res){
 
-  const { name, email, message } = req.body;
+if(req.method==="POST"){
 
-  if (!name || !email || !message) {
-    return res.status(400).json({ message: "All fields required" });
-  }
+return res.status(200).json({
+message:"Message received"
+})
 
-  return res.status(200).json({ message: "Message received successfully" });
+}
+
+res.status(405).end()
+
 }
