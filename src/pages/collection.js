@@ -1,34 +1,29 @@
-import Header from "components/Header"
-import Footer from "components/Footer"
-import ProductCard from "components/ProductCard"
-import products from "data/products.json"
+import Navbar from "../components/Navbar"
+import ProductCard from "../components/ProductCard"
+import Footer from "../components/Footer"
 
 export default function Collection(){
 
+const products=[
+{img:"/nail1.jpg",name:"Rose Luxury",price:999},
+{img:"/nail2.jpg",name:"Diamond Gloss",price:1199}
+]
+
 return(
+<>
+<Navbar/>
 
-<div>
-
-<Header/>
-
-<section className="container">
-
-<h1>Collection</h1>
+<div className="container">
+<h1 style={{marginTop:"40px"}}>Collection</h1>
 
 <div className="grid">
-
-{products.map(p=>(
-<ProductCard key={p.id} product={p}/>
+{products.map((p,i)=>(
+<ProductCard key={i} {...p}/>
 ))}
-
 </div>
-
-</section>
+</div>
 
 <Footer/>
-
-</div>
-
+</>
 )
-
 }
