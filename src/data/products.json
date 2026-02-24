@@ -1,18 +1,12 @@
-```json
 [
-  {
-    "id": 1,
-    "name": "Royal Nude",
-    "description": "A whisper of elegance for your fingertips.",
-    "price": 45,
-    "image": "/images/product1.jpg"
-  },
-  {
-    "id": 2,
-    "name": "Velvet Noir",
-    "description": "Deep black with a soft matte finish.",
-    "price": 48,
-    "image": "/images/product2.jpg"
-  }
+{
+"id":1,
+"name":"Royal Nude",
+"price":1299
+},
+{
+"id":2,
+"name":"Gloss Pink",
+"price":1199
+}
 ]
-```
