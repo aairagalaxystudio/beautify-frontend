@@ -1,17 +1,9 @@
-export default function ProductCard({product}){
-
+export default function ProductCard({img,name,price}){
 return(
-
-<div className="card">
-
-<img src={product.image}/>
-
-<h3>{product.name}</h3>
-
-<p>₹{product.price}</p>
-
+<div>
+<img src={img} style={{width:"100%",borderRadius:"10px"}} />
+<h3>{name}</h3>
+<p>₹{price}</p>
 </div>
-
 )
-
 }
