@@ -1,25 +1,34 @@
-import Layout from "components/Layout"
+import Header from "components/Header"
+import Footer from "components/Footer"
+import ProductCard from "components/ProductCard"
 import products from "data/products.json"
 
 export default function Collection(){
 
 return(
-<Layout>
 
-<div className="container">
+<div>
+
+<Header/>
+
+<section className="container">
 
 <h1>Collection</h1>
 
+<div className="grid">
+
 {products.map(p=>(
-<div key={p.id}>
-<h3>{p.name}</h3>
-<p>₹{p.price}</p>
-</div>
+<ProductCard key={p.id} product={p}/>
 ))}
 
 </div>
 
-</Layout>
+</section>
+
+<Footer/>
+
+</div>
+
 )
 
 }
