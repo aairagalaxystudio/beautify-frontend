@@ -1,0 +1,275 @@
+```css
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --gold: #d4af37;
+  --gray: #777;
+  --light: #f8f8f8;
+  --container: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-inter);
+  background: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.logo {
+  font-family: var(--font-playfair);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  color: var(--black);
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 60px;
+  border-top: 1px solid #eee;
+  color: var(--gray);
+}
+
+/* Buttons */
+.btn, .cta {
+  display: inline-block;
+  padding: 14px 30px;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover, .cta:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.heroVideo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  text-align: center;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.heroContent h1 {
+  font-family: var(--font-playfair);
+  font-size: clamp(40px, 8vw, 80px);
+  margin-bottom: 20px;
+}
+
+.heroContent p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Products Grid */
+.products {
+  padding: 100px 0;
+}
+
+.products h2 {
+  font-family: var(--font-playfair);
+  font-size: 48px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+/* Product Card */
+.card {
+  display: block;
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transition: all 0.4s;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* Brand Story */
+.story {
+  background: var(--light);
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.story h2 {
+  font-family: var(--font-playfair);
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.story p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: var(--gray);
+}
+
+/* Product Page */
+.productPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 100px 40px;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.info h1 {
+  font-family: var(--font-playfair);
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.info p {
+  margin-bottom: 30px;
+  color: var(--gray);
+}
+
+.info h2 {
+  font-size: 32px;
+  color: var(--gold);
+  margin-bottom: 40px;
+}
+
+/* Cart Drawer */
+.cartDrawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background: var(--white);
+  box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+  padding: 40px;
+  z-index: 200;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+}
+
+/* For demo, you'd add a toggle to show it. */
+.cartDrawer.open {
+  transform: translateX(0);
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .productPage {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    margin: 0 15px;
+  }
+}
+```
+
+---
