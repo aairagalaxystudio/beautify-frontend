@@ -23,5 +23,24 @@ export default function ProductCard({ product }: { product: Product }) {
   );
 }
 ```
+```tsx
+'use client';
+import { useWishlist } from '@/store/wishlistStore';
+
+// inside ProductCard component
+const { toggleItem, isInWishlist } = useWishlist();
+const inWishlist = isInWishlist(product.id);
+
+return (
+  <Tilt ...>
+    <div className="card">
+      <button onClick={() => toggleItem(product)}>
+        {inWishlist ? '❤️' : '🤍'}
+      </button>
+      <Link ...>...</Link>
+    </div>
+  </Tilt>
+);
+```
 
 ---
