@@ -1,0 +1,25 @@
+```css
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #d4af37;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+```
+
+Include in src/app/layout.tsx (inside <body>, before children):
+
+```tsx
+import CustomCursor from '@/components/CustomCursor';
+// ...
+<body>
+  <CustomCursor />
+  <SmoothScroll>...</SmoothScroll>
+</body>
+```
