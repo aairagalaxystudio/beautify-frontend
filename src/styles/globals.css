@@ -1,4 +1,38 @@
 ```css
+.as-seen-in {
+  padding: 60px 0;
+  background: var(--white);
+  text-align: center;
+}
+
+.as-seen-in .label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gray);
+  margin-bottom: 30px;
+}
+
+.logo-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.logo-strip img {
+  height: 30px;
+  width: auto;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.logo-strip img:hover {
+  opacity: 1;
+} 
+
+
+```css
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
